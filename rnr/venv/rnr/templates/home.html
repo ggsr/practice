@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block title %}RnR{% endblock %}
+
+{% block content_title %}<h1>DC Metro's Premier Performance Shop</h1>
+
+    <h2>Welcome!</h2>
+    <div>RnR cycles is a ..a.sdjfaksdjlf</div>
+    <h3>SERVICES</h3>
+    <div>RnR cycles is a ..a.sdjfaksdjlf</div>
+    <h3>HOURS</h3>
+    <div>RnR cycles is a ..a.sdjfaksdjlf</div>
+    <h3>DISCOVER AMA</h3>    
+    <div>RnR cycles is a ..a.sdjfaksdjlf</div>
+
+
+{% endblock %}
+
+{% block content %}
+  {% for entry in object_list %}
+    {% if search %}
+      {% set entry = entry.entry %}
+    {% endif %}
+<!--     <h3>
+      <a href="{% if entry.published %}{{ url_for('detail', slug=entry.slug) }}{% else %}{{ url_for('edit', slug=entry.slug) }}{% endif %}">
+        {{ entry.title }}
+      </a>
+    </h3> -->
+
+  {% endfor %}
+{% endblock %}
