@@ -20,11 +20,13 @@
         <div class="navbar-header">
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
             <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="{{ url_for('index') }}">RnR</a>
+          <a class="navbar-brand" href="{{ url_for('index') }}">Home</a>
+          <a class="navbar-brand" href="{{ url_for('garage_services') }}">Services</a>
+          <a class="navbar-brand" href="{{ url_for('racing_info') }}">Racing</a>
+          <a class="navbar-brand" href="{{ url_for('trackDays') }}">Track Days</a>
+          <a class="navbar-brand" href="{{ url_for('Learn2Ride') }}">Learn 2 Ride</a>
+          <a class="navbar-brand" href="{{ url_for('about_us') }}">About Us</a>
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
@@ -64,7 +66,7 @@
 
       <footer>
         <hr />
-        <p>Blog, &copy; 2015</p>
+        <p>RnR, est. 2007</p>
       </footer>
     </div>
   </body>
