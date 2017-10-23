@@ -15,9 +15,9 @@
     <div class="navbar navbar-default navbar-static-top" role="navigation">
       <div class="container">
         <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <!-- <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
             <span class="sr-only">Toggle navigation</span>
-          </button>
+          </button> -->
           <a class="navbar-brand" href="{{ url_for('index') }}">Home</a>
           <a class="navbar-brand" href="{{ url_for('garage_services') }}">Services</a>
           <a class="navbar-brand" href="{{ url_for('racing_info') }}">Racing</a>
@@ -34,13 +34,13 @@
             {% endif %}
             {% block extra_header %}{% endblock %}
           </ul>
-          {% block search_bar %}
+<!--           {% block search_bar %}
             <form action="{{ url_for('index') }}" class="navbar-form navbar-right" id="search-form" method="get" role="search">
               <div class="form-group">
                 <input class="form-control" name="q" placeholder="Search" type="text" value="{% if search %}{{ search }}{% endif %}">
               </div>
             </form>
-          {% endblock %}
+          {% endblock %} -->
         </div>
       </div>
     </div>

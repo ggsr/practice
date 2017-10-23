@@ -1,0 +1,20 @@
+footer {
+   position:fixed;
+   left:0px;
+   bottom:0px;
+   height:30px;
+   width:100%;
+   background:#999;
+}
+body { 
+	font-family: sans-serif;
+	background: #eee; 
+}
+a, h1, h2 {
+ 	color: #377ba8; 
+}
+h1, h2 { 
+	font-family: 'Georgia', serif;
+	margin: 0; 
+}
+
