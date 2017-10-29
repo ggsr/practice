@@ -7,17 +7,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="noindex">
     <link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     {% block extra_head %}{% endblock %}
   </head>
 
   <body>
     <div class="page">
-    <div class="navbar navbar-default navbar-static-top" role="navigation">
+   <!-- <div class="navbar navbar-default navbar-static-top" role="navigation">
       <div class="container">
         <div class="navbar-header">
           <!-- <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
             <span class="sr-only">Toggle navigation</span>
           </button> -->
+            
+          <!--  
           <a class="navbar-brand" href="{{ url_for('index') }}">Home</a>
           <a class="navbar-brand" href="{{ url_for('garage_services') }}">Services</a>
           <a class="navbar-brand" href="{{ url_for('racing_info') }}">Racing</a>
@@ -40,10 +45,58 @@
                 <input class="form-control" name="q" placeholder="Search" type="text" value="{% if search %}{{ search }}{% endif %}">
               </div>
             </form>
-          {% endblock %} -->
+          {% endblock %} 
         </div>
       </div>
+    </div> -->
+        
+        <div class="needsName">
+  <nav class="navbar navbar-inverse navbar-static-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar3">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand"><img src="https://static.wixstatic.com/media/829857_7546fd9305224054acf17188933c774a.png/v1/fill/w_355,h_170,al_c,usm_0.66_1.00_0.01/829857_7546fd9305224054acf17188933c774a.png" alt="RnR Cycles">
+        </a>
+      </div>
+      <div id="navbar3" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li class="active"><a href="#">Home</a></li>
+          <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Racing<span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="#">Calendar</a></li>
+                <li><a href="#">Team</a></li>
+                <li><a href="#">Sponsors?</a></li>
+              </ul>
+            </li>
+        <!-- should "Track Days" and "Learn to Ride" be separate? I don't really know what they are. -->
+          <li><a href="#">Track Days</a></li>
+          <li><a href="#">Learn 2 Ride</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Inside the Shop<span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+              <li class="dropdown-header">Service</li>
+              <li><a href="#">Maintenance</a></li>
+              <li><a href="#">Tune-Up</a></li>
+              <li><a href="#">Custom Work</a></li>
+              <li class="divider"></li>
+              <li class="dropdown-header">Shop</li>
+              <li><a href="#">Parts</a></li>
+              <li><a href="#">Bikes</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <!--/.nav-collapse -->
     </div>
+    <!--/.container-fluid -->
+  </nav>
+</div>
 
     <div class="container">
       {% for category, message in get_flashed_messages(with_categories=true) %}
@@ -53,18 +106,15 @@
         </div>
       {% endfor %}
 
-      {% block page_header %}
-        <div class="page-header">
-          <h1>{% block content_title %}{% endblock %}</h1>
-        </div>
-      {% endblock %}
+        <h1>
+            {% block page_header %} {% endblock %} 
+        </h1>
 
-      {% block content %}{% endblock %}
+      {% block content %}What's the content here? What the actual page is?{% endblock %}
 
       <footer>
       RnR, est. 2007
       </footer>
     </div>
-  </div>
   </body>
 </html>
